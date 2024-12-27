@@ -7,6 +7,7 @@ jobs:
       matrix:
         gemfile:
           - Gemfile
+          - gemfiles/Gemfile-rails-7-1
           - gemfiles/Gemfile-rails-7-0
           - gemfiles/Gemfile-rails-6-1
           - gemfiles/Gemfile-rails-6-0
@@ -14,6 +15,7 @@ jobs:
           - gemfiles/Gemfile-rails-5-1
           - gemfiles/Gemfile-rails-5-0
         ruby:
+          - '3.4'
           - '3.3'
           - '3.2'
           - '3.1'
@@ -23,19 +25,43 @@ jobs:
           - '2.5'
         exclude:
           - gemfile: Gemfile
+            ruby: '3.1'
+          - gemfile: Gemfile
+            ruby: '3.0'
+          - gemfile: Gemfile
+            ruby: '2.7'
+          - gemfile: Gemfile
             ruby: '2.6'
           - gemfile: Gemfile
             ruby: '2.5'
+          - gemfile: gemfiles/Gemfile-rails-7-2
+            ruby: '3.0'
+          - gemfile: gemfiles/Gemfile-rails-7-2
+            ruby: '2.7'
+          - gemfile: gemfiles/Gemfile-rails-7-2
+            ruby: '2.6'
+          - gemfile: gemfiles/Gemfile-rails-7-2
+            ruby: '2.5'
+          - gemfile: gemfiles/Gemfile-rails-7-1
+            ruby: '2.6'
+          - gemfile: gemfiles/Gemfile-rails-7-1
+            ruby: '2.5'
           - gemfile: gemfiles/Gemfile-rails-7-0
             ruby: '2.6'
           - gemfile: gemfiles/Gemfile-rails-7-0
             ruby: '2.5'
+          - gemfile: gemfiles/Gemfile-rails-6-1
+            ruby: '3.4'
+          - gemfile: gemfiles/Gemfile-rails-6-0
+            ruby: '3.4'
           - gemfile: gemfiles/Gemfile-rails-6-0
             ruby: '3.3'
           - gemfile: gemfiles/Gemfile-rails-6-0
             ruby: '3.2'
           - gemfile: gemfiles/Gemfile-rails-6-0
             ruby: '3.1'
+          - gemfile: gemfiles/Gemfile-rails-5-2
+            ruby: '3.4'
           - gemfile: gemfiles/Gemfile-rails-5-2
             ruby: '3.3'
           - gemfile: gemfiles/Gemfile-rails-5-2
@@ -47,6 +73,8 @@ jobs:
           - gemfile: gemfiles/Gemfile-rails-5-2
             ruby: '2.7'
           - gemfile: gemfiles/Gemfile-rails-5-1
+            ruby: '3.4'
+          - gemfile: gemfiles/Gemfile-rails-5-1
             ruby: '3.3'
           - gemfile: gemfiles/Gemfile-rails-5-1
             ruby: '3.2'
@@ -56,6 +84,8 @@ jobs:
             ruby: '3.0'
           - gemfile: gemfiles/Gemfile-rails-5-1
             ruby: '2.7'
+          - gemfile: gemfiles/Gemfile-rails-5-0
+            ruby: '3.4'
           - gemfile: gemfiles/Gemfile-rails-5-0
             ruby: '3.3'
           - gemfile: gemfiles/Gemfile-rails-5-0
